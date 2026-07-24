@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight, PlayCircle, CheckCircle2, ShieldCheck } from "lucide-react";
+import { ArrowRight, PlayCircle, CheckCircle2 } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -65,19 +65,6 @@ export default function Hero() {
               />
               <div className="absolute inset-0 mix-blend-color bg-gradient-to-br from-ink-950 via-ink-800 to-ohana-600" />
               <div className="absolute inset-0 bg-gradient-to-br from-ink-950/30 via-transparent to-ohana-600/20" />
-              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink-950/70 to-transparent" />
-            </div>
-
-            <div className="absolute inset-x-8 bottom-10 flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.08] p-4 shadow-glow backdrop-blur-xl">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-ohana-600 text-white">
-                <ShieldCheck className="h-5 w-5" />
-              </span>
-              <div>
-                <p className="text-sm font-semibold text-white">Compliance, Automated</p>
-                <p className="text-xs text-ink-100/70">
-                  Real checks, run by real pharmacists.
-                </p>
-              </div>
             </div>
           </div>
         </div>
