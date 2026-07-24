@@ -1,20 +1,7 @@
 "use client";
 
-import {
-  ArrowRight,
-  PlayCircle,
-  CheckCircle2,
-  BadgeCheck,
-  UserSearch,
-  FileCheck2,
-  ScanBarcode,
-} from "lucide-react";
-
-const CHECKS = [
-  { label: "FDA Establishment Verification", status: "Verified", icon: BadgeCheck },
-  { label: "OIG Background Search", status: "Clear", icon: UserSearch },
-  { label: "State License Verification", status: "Active", icon: FileCheck2 },
-];
+import Image from "next/image";
+import { ArrowRight, PlayCircle, CheckCircle2, ShieldCheck } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -66,39 +53,26 @@ export default function Hero() {
         </div>
 
         <div className="relative animate-fade-in [animation-delay:200ms] [animation-fill-mode:backwards]">
-          <div className="relative mx-auto max-w-md rounded-2xl border border-white/10 bg-white/[0.06] p-6 shadow-2xl backdrop-blur-xl sm:p-8">
-            <div className="flex items-center justify-between border-b border-white/10 pb-4">
-              <div className="flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-red-400/80" />
-                <span className="h-2.5 w-2.5 rounded-full bg-ohana-400/80" />
-                <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/80" />
-              </div>
-              <span className="font-mono text-xs text-ink-100/50">ohana-compliance // live</span>
-            </div>
+          <div className="relative mx-auto aspect-[4/5] max-w-md overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
+            <Image
+              src="https://images.unsplash.com/photo-1764795850513-fa8a469a4600?fm=jpg&q=80&w=900&h=1100&fit=crop&auto=format"
+              alt="Pharmacist reviewing compliance records on a tablet in a pharmacy"
+              fill
+              sizes="(min-width: 1024px) 448px, 90vw"
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/10 to-transparent" />
 
-            <div className="mt-6 space-y-4">
-              {CHECKS.map((check) => (
-                <div
-                  key={check.label}
-                  className="flex items-center justify-between rounded-xl bg-white/5 px-4 py-3.5"
-                >
-                  <div className="flex items-center gap-2.5">
-                    <check.icon className="h-4 w-4 text-ohana-400" />
-                    <span className="text-sm text-ink-100/70">{check.label}</span>
-                  </div>
-                  <span className="rounded-full bg-emerald-500/15 px-2.5 py-1 text-xs font-semibold text-emerald-300">
-                    {check.status}
-                  </span>
-                </div>
-              ))}
-
-              <div className="rounded-xl border border-ohana-400/30 bg-ohana-500/10 px-4 py-3.5">
-                <div className="flex items-center gap-2 text-ohana-300">
-                  <ScanBarcode className="h-4 w-4" />
-                  <span className="text-xs font-semibold uppercase tracking-wider">
-                    Data Matrix Parsing Ready
-                  </span>
-                </div>
+            <div className="absolute inset-x-5 bottom-5 flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.08] p-4 shadow-glow backdrop-blur-xl">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-ohana-600 text-white">
+                <ShieldCheck className="h-5 w-5" />
+              </span>
+              <div>
+                <p className="text-sm font-semibold text-white">Compliance, Automated</p>
+                <p className="text-xs text-ink-100/70">
+                  Real checks, run by real pharmacists.
+                </p>
               </div>
             </div>
           </div>
