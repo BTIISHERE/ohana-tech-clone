@@ -56,8 +56,8 @@ export default function Hero() {
           <div className="relative mx-auto aspect-[4/5] max-w-md">
             <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_62%_68%_at_50%_42%,#000_45%,transparent_100%)] [-webkit-mask-image:radial-gradient(ellipse_62%_68%_at_50%_42%,#000_45%,transparent_100%)]">
               <Image
-                src="https://images.unsplash.com/photo-1582560469781-1965b9af903d?fm=jpg&q=80&w=900&h=1100&fit=crop&auto=format"
-                alt="Pharmacist reviewing compliance records on a computer"
+                src="https://images.unsplash.com/photo-1758573467057-955f803660a9?fm=jpg&q=80&w=900&h=1100&fit=crop&auto=format"
+                alt="Pharmacist examining a medicine bottle for verification"
                 fill
                 sizes="(min-width: 1024px) 448px, 90vw"
                 className="object-cover"
