@@ -102,13 +102,6 @@ export default function Hero() {
               </div>
             </div>
           </div>
-
-          <div className="absolute -bottom-6 right-2 hidden animate-float rounded-xl border border-white/10 bg-ink-900/90 p-3 shadow-glow backdrop-blur-lg sm:flex sm:items-center sm:gap-2">
-            <UserSearch className="h-4 w-4 text-ohana-400" />
-            <span className="whitespace-nowrap text-xs font-medium text-white">
-              OIG Search Complete
-            </span>
-          </div>
         </div>
       </div>
     </section>
