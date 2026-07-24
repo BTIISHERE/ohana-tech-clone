@@ -54,15 +54,19 @@ export default function Hero() {
 
         <div className="relative animate-fade-in [animation-delay:200ms] [animation-fill-mode:backwards]">
           <div className="relative mx-auto aspect-[4/5] max-w-md">
-            <Image
-              src="https://images.unsplash.com/photo-1582560469781-1965b9af903d?fm=jpg&q=80&w=900&h=1100&fit=crop&auto=format"
-              alt="Pharmacist reviewing compliance records on a computer"
-              fill
-              sizes="(min-width: 1024px) 448px, 90vw"
-              className="object-cover [mask-image:radial-gradient(ellipse_62%_68%_at_50%_42%,#000_45%,transparent_100%)] [-webkit-mask-image:radial-gradient(ellipse_62%_68%_at_50%_42%,#000_45%,transparent_100%)]"
-              priority
-            />
-            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink-950/70 to-transparent" />
+            <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_62%_68%_at_50%_42%,#000_45%,transparent_100%)] [-webkit-mask-image:radial-gradient(ellipse_62%_68%_at_50%_42%,#000_45%,transparent_100%)]">
+              <Image
+                src="https://images.unsplash.com/photo-1582560469781-1965b9af903d?fm=jpg&q=80&w=900&h=1100&fit=crop&auto=format"
+                alt="Pharmacist reviewing compliance records on a computer"
+                fill
+                sizes="(min-width: 1024px) 448px, 90vw"
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 mix-blend-color bg-gradient-to-br from-ink-950 via-ink-800 to-ohana-600" />
+              <div className="absolute inset-0 bg-gradient-to-br from-ink-950/30 via-transparent to-ohana-600/20" />
+              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-ink-950/70 to-transparent" />
+            </div>
 
             <div className="absolute inset-x-8 bottom-10 flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.08] p-4 shadow-glow backdrop-blur-xl">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-ohana-600 text-white">
