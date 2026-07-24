@@ -3,7 +3,6 @@
 import {
   ArrowRight,
   PlayCircle,
-  ShieldCheck,
   CheckCircle2,
   BadgeCheck,
   UserSearch,
@@ -30,12 +29,7 @@ export default function Hero() {
 
       <div className="container relative grid items-center gap-16 lg:grid-cols-2 lg:gap-12">
         <div className="max-w-xl animate-fade-in-up">
-          <div className="section-eyebrow border-white/20 bg-white/10 text-ohana-200">
-            <ShieldCheck className="h-3.5 w-3.5" />
-            Founder-Led Compliance Technology
-          </div>
-
-          <h1 className="mt-6 text-balance font-display text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-[3.4rem]">
+          <h1 className="text-balance font-display text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-[3.4rem]">
             Compliance Automation for the
             <span className="block text-ohana-300">US Drug Supply Chain.</span>
           </h1>
