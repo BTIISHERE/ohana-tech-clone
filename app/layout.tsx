@@ -1,42 +1,54 @@
 import type { Metadata } from "next";
-import { Archivo, Inter, Courier_Prime } from "next/font/google";
+import { Inter, Sora, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const heading = Archivo({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
-  variable: "--font-heading",
+  variable: "--font-inter",
   display: "swap",
 });
 
-const body = Inter({
+const sora = Sora({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-body",
+  variable: "--font-sora",
   display: "swap",
 });
 
-const mono = Courier_Prime({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-mono",
+  variable: "--font-jetbrains",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Ohana Tech Inc",
+  title: "Ohana Tech Inc. | Compliance Automation for the Drug Supply Chain",
   description:
-    "Ohana Tech Inc is a tech consulting corporation based out of New York focused on optimizing routine workflows into automated web apps to reduce organizational demands, allowing our clients to more efficiently allocate their time and assets.",
+    "Ohana Tech Inc. is a New York-based technology consulting corporation founded by a multi-state licensed pharmacist, building automated software that optimizes routine drug supply chain compliance workflows.",
+  keywords: [
+    "FDA Establishment Verification",
+    "OIG Background Search Automation",
+    "State License Verification",
+    "Data Matrix Parsing",
+    "Drug Supply Chain Compliance",
+    "Pharmacy Compliance Software",
+    "Ohana Tech",
+  ],
+  openGraph: {
+    title: "Ohana Tech Inc. | Compliance Automation for the Drug Supply Chain",
+    description:
+      "Founder-led software automating FDA, OIG, and state license compliance checks for the US drug supply chain.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html lang="en" className={`${heading.variable} ${body.variable} ${mono.variable}`}>
-      <body className="font-body antialiased">{children}</body>
+    <html lang="en" className={`${inter.variable} ${sora.variable} ${jetbrainsMono.variable}`}>
+      <body className="font-sans">{children}</body>
     </html>
   );
 }

@@ -2,23 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --color-clay: #d4967d;
-  --color-sage: #495a58;
-  --color-charcoal: #303636;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-ink-700 antialiased;
+  }
+
+  ::selection {
+    @apply bg-ohana-300 text-ink-900;
+  }
 }
 
-html {
-  scroll-behavior: smooth;
-}
+@layer components {
+  .section-eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-ohana-500/30 bg-ohana-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-ohana-700;
+  }
 
-body {
-  color: var(--color-charcoal);
-  background-color: #ffffff;
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-ohana-600 px-6 py-3.5 text-sm font-semibold text-white shadow-glow transition-all duration-200 hover:bg-ohana-700 hover:shadow-lg active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-ink-200 bg-white px-6 py-3.5 text-sm font-semibold text-ink-800 transition-all duration-200 hover:border-ohana-400 hover:text-ohana-700 active:scale-[0.98];
+  }
+
+  .btn-primary-dark {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-white px-6 py-3.5 text-sm font-semibold text-ink-900 shadow-glow transition-all duration-200 hover:bg-ohana-50 active:scale-[0.98];
+  }
+
+  .btn-ghost-dark {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-white/20 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur transition-all duration-200 hover:border-white/40 hover:bg-white/10 active:scale-[0.98];
+  }
 }
 
 @layer utilities {
-  .container-page {
-    @apply mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12;
+  .text-balance {
+    text-wrap: balance;
   }
 }
